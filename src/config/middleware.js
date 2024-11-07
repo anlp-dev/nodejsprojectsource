@@ -10,6 +10,7 @@ const configMiddleware = (app) => {
   app.use(express.json());
   app.use(express.urlencoded({ extended: true }));
   app.use(express.static('public')); 
+  console.log('hah');
 }
 
 module.exports = {configMiddleware};
