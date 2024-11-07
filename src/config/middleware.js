@@ -10,7 +10,8 @@ const configMiddleware = (app) => {
   app.use(express.json());
   app.use(express.urlencoded({ extended: true }));
   app.use(express.static('public')); 
-  console.log('hah');
+  // Middleware xử lý JSON body
+  app.use(express.json());
 }
 
 module.exports = {configMiddleware};
