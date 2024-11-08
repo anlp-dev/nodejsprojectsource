@@ -3,7 +3,7 @@ const {configMiddleware} = require('./config/middleware');
 require('dotenv').config();
 const {connect} = require('./db/DBConnect');
 const route = require('./routes/MainRoutes');
-
+const {viewEngine} = require('./config/viewEngine')
 // config port and hostname
 const port = process.env.PORT || 8888;
 const hostname = process.env.HOSTNAME  || '127.0.0.1';
@@ -11,6 +11,7 @@ const hostname = process.env.HOSTNAME  || '127.0.0.1';
 const app = express();
 configMiddleware(app);
 connect();
+viewEngine(app);
 
 app.use((err, req, res, next) => {
   console.error(err.stack);
