@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon src/app.js",
-    "dev": "nodemon --watch 'src/**/*.js' src/app.js",
+    "dev": "nodemon --watch src --ext js src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
